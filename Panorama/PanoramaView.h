@@ -124,4 +124,45 @@
  */
 -(BOOL) touchInRect:(CGRect)rect;
 
+/**
+ * Adds a Button to a Location
+ *
+ * @param UIButton defined is the button itself
+ * @param GLKVector3 is the 3D vector where the button should be located in the 3D space
+ */
+- (void)addButton:(UIButton *)button toPositionVector:(GLKVector3)vector;
+
+/**
+ * Adds a Button to a Location
+ *
+ * @param UIButton defined is the button itself
+ * @param float is the angle in radians
+ */
+- (void)addButton:(UIButton *)button toAngleRadians:(float)radians;
+
+/**
+ * Adds a Button to a Location
+ *
+ * @param UIButton defined is the button itself
+ * @param float is the angle in degrees
+ */
+- (void)addButton:(UIButton *)button toAngleDegrees:(float)degrees;
+
+
+/**
+ * Gathers 3D Vector to represent a given angle (in degrees)
+ *
+ * @param float is the angle in degrees
+ * @return GLKVector3 vector to represent that angle
+ */
++ (GLKVector3)vector3FromAngleDegree:(float)degrees;
+
+/**
+ * Gathers 3D Vector to represent a given angle (in radians)
+ *
+ * @param float is the angle in radians
+ * @return GLKVector3 vector to represent that angle
+ */
++ (GLKVector3)vector3FromAngleRadian:(float)radian;
+
 @end
